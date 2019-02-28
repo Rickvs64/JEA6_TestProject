@@ -6,6 +6,7 @@
 <%
     Movie movie = (Movie) request.getAttribute("movie");
     out.print(movie.getName());
+    out.print(movie);
 %>
 </p>
 </body>

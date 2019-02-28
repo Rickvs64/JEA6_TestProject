@@ -28,7 +28,13 @@ public class MovieRepo {
 
 
     @Transactional(REQUIRED)
-    public void addMovie(Movie movie) {
-        em.persist(movie);
+    public boolean addMovie(Movie movie) {
+        try {
+            em.persist(movie);
+            return true;
+        }
+        catch (Exception ex) {
+            return false;
+        }
     }
 }
