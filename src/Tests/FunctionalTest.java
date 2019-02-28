@@ -18,7 +18,7 @@ public class FunctionalTest {
 
         String basePath = System.getProperty("server.base");
         if(basePath==null){
-            basePath = "/rest-garage-sample/";
+            basePath = "/PayaraIntro1/";
         }
         RestAssured.basePath = basePath;
 

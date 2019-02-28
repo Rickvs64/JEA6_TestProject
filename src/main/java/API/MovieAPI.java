@@ -21,8 +21,9 @@ public class MovieAPI {
 
     @Path("/{ID}")
     @GET
-    public Movie getMovieById(@PathParam("ID") long id) {
-        return movieRepo.getMovieById(id);
+    public Movie getMovieById(@PathParam("ID") Integer id) {
+        Long l = new Long(id);
+        return movieRepo.getMovieById(l);
     }
 
     @POST
